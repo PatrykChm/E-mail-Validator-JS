@@ -1,0 +1,120 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	width: 100%;
+	height: 100vh;
+	background: rgb(38, 233, 231);
+	background: linear-gradient(34deg, rgba(38, 233, 231, 1) 0%, rgba(27, 104, 255, 1) 100%);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-family: 'Raleway', sans-serif;
+}
+
+.card {
+	width: 80%;
+	height: 40%;
+	padding: 20px;
+	border: 1px solid black;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	background: rgba(0, 0, 0, 0.16);
+	border-radius: 16px;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(6.4px);
+	border: 1px solid rgba(0, 0, 0, 0.14);
+
+	.error_active {
+		visibility: visible;
+	}
+
+	&__header {
+		h1 {
+			margin-bottom: 15px;
+			text-align: center;
+			font-size: 36px;
+		}
+		p {
+			line-height: 23px;
+		}
+	}
+
+	&__email {
+		position: relative;
+		width: 100%;
+		.card__input {
+			width: 100%;
+			padding: 0 10px;
+			height: 40px;
+			border-radius: 60px;
+			border: none;
+			margin-bottom: 15px;
+		}
+
+		.card__button {
+			position: absolute;
+			cursor: pointer;
+			right: 0;
+			top: 0;
+			height: 40px;
+			width: 60px;
+			border-radius: 60px;
+
+			border: none;
+			background: rgb(57, 81, 125);
+			background: linear-gradient(238deg, rgba(57, 81, 125, 1) 0%, rgba(0, 86, 255, 1) 47%);
+		}
+
+		i {
+			color: white;
+		}
+	}
+
+	&__error {
+		visibility: hidden;
+		color: red;
+		text-align: center;
+		font-weight: 500;
+		font-size: 18px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.card__header {
+		padding: 20px;
+		h1 {
+			font-size: 52px;
+		}
+		p {
+			font-size: 28px;
+		}
+	}
+
+	.card__email {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		.card__input {
+			width: 50%;
+			height: 45px;
+		}
+		input:focus {
+			border: 1px solid #1670be;
+			box-shadow: 0 0 3px #1670be;
+			outline-offset: 0px;
+			outline: none;
+		}
+
+		.card__button {
+			height: 45px;
+			right: 25%;
+		}
+	}
+}
