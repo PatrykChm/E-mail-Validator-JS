@@ -28,3 +28,4 @@ const checkEmail = () => {
 }
 
 sendButton.addEventListener('click', checkEmail)
+

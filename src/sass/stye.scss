@@ -19,13 +19,13 @@ body {
 	width: 80%;
 	height: 40%;
 	padding: 20px;
-	border: 1px solid black;
+	
 	color: white;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-evenly;
-	background: rgba(0, 0, 0, 0.36);
+	background: rgba(0, 0, 0, 0.56);
 	border-radius: 16px;
 	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 	backdrop-filter: blur(6.4px);
@@ -33,14 +33,12 @@ body {
 
 	.error-active {
 		visibility: visible;
-		color: red;
-		
+		color: rgb(255, 51, 0);
 	}
 
 	.confirm-active {
 		visibility: visible;
-		color: green;
-	
+		color: rgb(91, 255, 91);
 	}
 
 	&__header {
@@ -62,7 +60,8 @@ body {
 			padding: 0 20px;
 			height: 40px;
 			border-radius: 60px;
-			border: none;
+			border: 1px solid #949494;
+			outline: none;
 			margin-bottom: 15px;
 		}
 		input::placeholder {
@@ -78,7 +77,6 @@ body {
 			height: 40px;
 			width: 60px;
 			border-radius: 60px;
-
 			border: none;
 			background: rgb(57, 81, 125);
 			background: linear-gradient(238deg, rgba(57, 81, 125, 1) 0%, rgba(0, 86, 255, 1) 47%);
@@ -126,7 +124,7 @@ body {
 		}
 		p {
 			font-size: 28px;
-            line-height: 32px;
+			line-height: 32px;
 		}
 	}
 
